@@ -1,0 +1,16 @@
+header{
+    display: flex;
+    justify-content: space-around; 
+}
+a {
+    text-decoration: none;
+}
+.nav-bar {
+    text-underline-offset: none;
+    font-size: 4rem;
+    color: olive; 
+    border-bottom: black solid 3px;
+}
+.nav-bar:hover {
+    text-shadow: rgb(90, 10, 10) 3px 3px 0px;
+}
