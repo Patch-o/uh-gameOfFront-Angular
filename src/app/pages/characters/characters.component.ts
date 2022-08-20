@@ -6,11 +6,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './characters.component.html',
   styleUrls: ['./characters.component.scss']
 })
-export class CharactersComponent implements OnInit {
-  
-  characters= [];
-
-
+export class CharactersComponent implements OnInit {  
+characters = [];
   constructor(private pajaritoCharacters: ServiceCharactersService) { }
 
   ngOnInit(): void {
