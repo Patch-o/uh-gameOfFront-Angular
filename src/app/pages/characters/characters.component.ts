@@ -1,3 +1,4 @@
+import { ServiceCharactersService } from './../../shared/services/service-characters.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./characters.component.scss']
 })
 export class CharactersComponent implements OnInit {
+  
+  characters= [];
 
-  constructor() { }
+
+  constructor(private pajaritoCharacters: ServiceCharactersService) { }
 
   ngOnInit(): void {
+    this.pajaritoCharacters.getCharacters().subscribe((res:any) => {
+      this.characters = res;
+      
+      console.log(res);
+    })
   }
 
 }
