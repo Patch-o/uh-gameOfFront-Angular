@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-gallery-houses',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryHousesComponent implements OnInit {
 
+  @Input() public house : any = [];
+  @Input() chichoDefault: any = {src:'https://www.combogamer.com/wp-content/uploads/2016/08/Chicho-Terremoto-tiro-especial.gif',
+  name:'chicho'}
   constructor() { }
 
   ngOnInit(): void {

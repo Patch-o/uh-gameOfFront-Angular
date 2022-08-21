@@ -1,3 +1,4 @@
+import { ServiceHousesService } from './../../shared/services/service-houses.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HousesComponent implements OnInit {
 
-  constructor() { }
+  houses= [];
+
+  constructor(private pajaritoHouses: ServiceHousesService) { }
 
   ngOnInit(): void {
+    this.pajaritoHouses.getHouses().subscribe((res:any) => {
+      this.houses = res;
+      
+      console.log(res);
+    })
   }
 
 }

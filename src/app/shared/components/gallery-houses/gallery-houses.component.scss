@@ -1,0 +1,18 @@
+.gallery-house {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: white;
+    
+    background-color: olive;
+    justify-content: space-around;
+}
+.gallery-house-item {
+    background-color: red;
+    width: 25%;
+    text-align: center;
+    height: 350px;
+}
+img{
+    width: 200px;
+}

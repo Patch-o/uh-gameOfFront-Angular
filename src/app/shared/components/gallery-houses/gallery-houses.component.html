@@ -1,1 +1,9 @@
 <p>gallery-houses works!</p>
+<div class="gallery-house">
+    <div class="gallery-house-item" *ngFor="let item of house">
+        <h2>{{item['name']}}</h2>
+        <img *ngIf="!item['logoURL']" src="{{chichoDefault.src}}" >
+        <img *ngIf="item['logoURL']" src="{{item['logoURL']}}">
+      
+    </div>
+</div>
