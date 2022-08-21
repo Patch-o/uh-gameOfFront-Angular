@@ -1,0 +1,22 @@
+h2{ 
+    color: white;
+}
+.gallery-character {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    background-color: olive;
+    justify-content: space-around;
+    text-align: center;
+}
+.gallery-character-item {
+    
+    width: 25%;
+    text-align: center;
+    height: 350px;
+}
+img{
+    width: 200px;
+}

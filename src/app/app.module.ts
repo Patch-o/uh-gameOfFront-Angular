@@ -1,7 +1,7 @@
 import { HousesComponent } from './pages/houses/houses.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+// import {TranslateModule} from '@ngx-translate/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CharactersComponent } from './pages/characters/characters.component';
@@ -20,11 +20,13 @@ import { GalleryChronologyComponent } from './shared/components/gallery-chronolo
     CharactersComponent,
     ChronologyComponent,
     HousesComponent,
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // TranslateModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
