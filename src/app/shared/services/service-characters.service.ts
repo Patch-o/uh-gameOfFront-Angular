@@ -10,4 +10,7 @@ export class ServiceCharactersService {
     getCharacters(){ 
     return this.http.get("https://api.got.show/api/show/characters")
    }
+   getOneCharacter(characterDet:any){
+    return this.http.get(`https://api.got.show/api/show/characters/${characterDet}`)
+   }
 }

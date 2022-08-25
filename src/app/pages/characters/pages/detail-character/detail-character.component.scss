@@ -1,0 +1,20 @@
+*{
+   
+    color:wheat
+}
+.detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+.detail-info {
+    display: flex;
+    justify-content: space-around;
+}
+.detail-info-item{
+    display: flex;
+    flex-direction: column;
+    width: 5rem;
+}

@@ -2,8 +2,10 @@
 
 <div class="gallery-character">
     <div class="gallery-character-item" *ngFor=" let item of character">
-        <h2>{{item['name']}}</h2>
-        <img *ngIf="!item['image'] " src="{{truffle.src}}">
-        <img *ngIf="item['image']" src="{{item['image']}}" alt="{{item['name']}}">
+        <a [routerLink]="['/characters', item['name']]">
+            <h2>{{item['name']}}</h2>
+            <img *ngIf="!item['image'] " src="{{truffle.src}}">
+            <img *ngIf="item['image']" src="{{item['image']}}" alt="{{item['name']}}">
+        </a>
     </div>
 </div>

@@ -10,4 +10,7 @@ export class ServiceHousesService {
   getHouses(){
     return this.http.get("https://api.got.show/api/show/houses")
   }
+  getOneHouse(houseDet:any){
+    return this.http.get(`https://api.got.show/api/show/houses/${houseDet}`);
+  }
 }
