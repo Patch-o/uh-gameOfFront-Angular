@@ -13,6 +13,10 @@ import { GalleryChronologyComponent } from './shared/components/gallery-chronolo
 import { DetailHouseComponent } from './pages/houses/pages/detail-house/detail-house.component';
 import { DetailCharacterComponent } from './pages/characters/pages/detail-character/detail-character.component';
 import { HomeComponent } from './pages/home/home.component';
+import {SimplebarAngularModule} from 'simplebar-angular';
+import { TraductorComponent } from './shared/components/traductor/traductor.component';
+import { FootNavComponent } from './shared/components/foot-nav/foot-nav.component';
+import { ReturnHomeComponent } from './shared/components/return-home/return-home.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +30,16 @@ import { HomeComponent } from './pages/home/home.component';
     DetailHouseComponent,
     DetailCharacterComponent,
     HomeComponent,
+    TraductorComponent,
+    FootNavComponent,
+    ReturnHomeComponent,
 
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    SimplebarAngularModule,
     // TranslateModule.forRoot()
   ],
   providers: [],

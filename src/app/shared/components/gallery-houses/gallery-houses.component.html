@@ -1,12 +1,13 @@
-<p>gallery-houses works!</p>
+<ngx-simplebar style='height:70vh;' [options]="options">
 <div class="gallery-house">
     <div class="gallery-house-item" *ngFor="let item of house">
+        
+        <h2>{{item['name']}}</h2>
         <a [routerLink]="['/houses' , item['name']]">
-
-            <h2>{{item['name']}}</h2>
-            <img *ngIf="!item['logoURL']" src="{{chichoDefault.src}}" >
+        <img *ngIf="!item['logoURL']" src="{{chichoDefault.src}}" >
+            <img *ngIf="item['logoURL']" src="{{item['logoURL']}}">
         </a> 
-        <img *ngIf="item['logoURL']" src="{{item['logoURL']}}">
       
     </div>
-</div>                                                                                                                                                                                                                                      
+</div>
+</ngx-simplebar>

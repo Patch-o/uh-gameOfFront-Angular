@@ -14,6 +14,7 @@ const routes: Routes = [
   {path: "chronology", component: ChronologyComponent},
   {path: "houses/:idHouse", component: DetailHouseComponent},
   {path: "characters/:idCharacter", component: DetailCharacterComponent}
+  
 
 ];
 

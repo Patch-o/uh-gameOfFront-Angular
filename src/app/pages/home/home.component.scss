@@ -1,28 +1,11 @@
-header{   
-   
-    position: fixed;
-    width: 100%;
-    bottom: 5%;
-}
-a {
-    text-decoration: none;
-    font-size: 2rem;
-    color: white;
-   
-}
-.navBar{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 3rem;
+
+h1{
+    font-family: got;
+    font-size: 12rem;
+    color: transparent;
+    background-image: linear-gradient(180deg,white 0%,black 70%);
+    background-clip: text;
     text-align: center;
-    
+    font-weight: 90;
 }
-.nav-bar {
-    text-underline-offset: none;
-    font-size: 4rem;
-    color: olive; 
-    border-bottom: white solid 3px;
-}
-.nav-bar:hover {
-    text-shadow: rgb(90, 10, 10) 3px 3px 0px;
-}
+

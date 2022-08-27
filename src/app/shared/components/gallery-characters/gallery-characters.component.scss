@@ -1,5 +1,12 @@
+ngx-simplebar{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    margin-top: 8rem;
+}
 h2{ 
     color: white;
+    font-size: gota;
 }
 .gallery-character {
     display: flex;
@@ -7,16 +14,17 @@ h2{
     flex-direction: row;
     color: white;
     align-items: center;
-    background-color: olive;
     justify-content: space-around;
     text-align: center;
 }
-.gallery-character-item {
-    
+.gallery-character-item {    
     width: 25%;
     text-align: center;
     height: 350px;
 }
 img{
     width: 200px;
+}
+.simplebar-scrollbar::before{
+    background-color: rgb(251, 3, 3) !important;
 }

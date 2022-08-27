@@ -1,0 +1,14 @@
+
+.traductor{
+    position: absolute;
+    right:20px;
+    top: 3%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 10rem;
+    
+
+    img:hover{
+        transform: scale(1.3);
+    }
+}

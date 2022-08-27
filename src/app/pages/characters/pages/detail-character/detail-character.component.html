@@ -1,39 +1,51 @@
-
-
+<app-return-home></app-return-home>
 <div class="detail">
-<h1>{{detailCharacter.name}}</h1>
-<img src="{{detailCharacter.image}}">
+    <h1>{{ detailCharacter.name }}</h1>
+    <img src="{{ detailCharacter.image }}" />
 </div>
 
 <div class="detail-info">
-
-<div class="detail-info-item">
-    <p>PONER escudo casa </p>
-</div>
-
+    <div class="detail-info-item">
+        <p>PONER escudo casa</p>
+    </div>
+    
     <div class="detail-info-item">
         <h1>ALIANZAS</h1>
-        <p>{{detailCharacter.allegiances}}</p>
+        <p>{{ detailCharacter.allegiances }}</p>
     </div>
-
+    
     <div class="detail-info-item">
         <H1>APARARICIONES</H1>
-        <p>{{detailCharacter.appearances}}</p>
-    </div>
+        <div class="detail-info-item__appear">
+            <ngx-simplebar style="height: 15rem" [options]="options">
+        <div *ngFor="let item of detailCharacter.appearances">
+            <p>{{ item }}</p>
+        </div>
+    </ngx-simplebar>
+</div>
+</div>
 
-    <div class="detail-info-item">
-        <h1>PADRE</h1>
-        <p>{{detailCharacter.father}}</p>
-        <p *ngIf="!detailCharacter.father"> hije de peete</p>
-    </div>
+<div class="detail-info-item">
+    <h1>PADRE</h1>
+    <p>{{ detailCharacter.father }}</p>
+    <p *ngIf="!detailCharacter.father">Hijo bastardo</p>
+</div>
 
-    <div class="detail-info-item">
-        <h1>DESCENDIENTES</h1>
-        <p>{{detailCharacter.siblings}}</p>
-    </div>
+<div class="detail-info-item">
+    <h1>DESCENDIENTES</h1>
+    <p>{{ detailCharacter.siblings }}</p>
+</div>
 
-    <div class="detail-info-item">
-        <h1>TITULOS</h1>
-        <p >{{detailCharacter.titles}}   </p> 
+<div class="detail-info-item">
+    <h1>TITULOS</h1>
+    <div class="detail-info-item__appear">
+        <ngx-simplebar style="height: 15rem" [options]="options">
+            <div *ngFor="let item of detailCharacter.titles">
+                <p>{{ item }}</p>
+            </div>
+        </ngx-simplebar>
     </div>
 </div>
+</div>
+
+

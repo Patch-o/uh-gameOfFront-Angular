@@ -1,13 +1,15 @@
 *{
-   
-    color:wheat
+       color:wheat;
+       margin: 0;
 }
+
 .detail{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 60vh;
+    flex: 1 1 2 ;
 }
 .detail-info {
     display: flex;
@@ -16,5 +18,24 @@
 .detail-info-item{
     display: flex;
     flex-direction: column;
-    width: 5rem;
+    width: 12rem;
+  
+}
+.detail-info-item__appear {
+    margin-top: 1em;
+    p{
+        font-family: gota;
+        padding-top: 1em;
+    }
+}
+.detail-info-item__titles{
+    height: 1.5rem;
+}
+ngx-simplebar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 70vh;
+    background-color: rgb(0, 0, 0);
+
 }

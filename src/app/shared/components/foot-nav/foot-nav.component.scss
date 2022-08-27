@@ -1,3 +1,4 @@
+@import '../../../font';
 header{   
    
     position: fixed;
@@ -8,7 +9,7 @@ a {
     text-decoration: none;
     font-size: 2rem;
     color: white;
-   
+    font-family: got;
 }
 .navBar{
     display: flex;

@@ -1,4 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 body{
     background-color: black;
+    margin: 0;
+}
+.simplebar-scrollbar::before{
+    background-color: white !important;
+}
+h1,h2{
+    font-family: gota;
+    font-weight: 50;
+}
+p{
+    font-family: gota;
 }

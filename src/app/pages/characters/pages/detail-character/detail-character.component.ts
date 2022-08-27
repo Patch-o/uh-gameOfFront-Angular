@@ -15,13 +15,13 @@ export class DetailCharacterComponent implements OnInit {
     private urlId: ActivatedRoute,
     private pajaritoCharacter: ServiceCharactersService
   ) { }
-
+  options = { autoHide: false, scrollbarMinSize: 100 }
   ngOnInit(): void {
     this.urlId.params.subscribe(params=> {
       console.log(params['idCharacter']);
       const detail= params['idCharacter'];
       this.pajaritoCharacter.getOneCharacter(detail).subscribe((res:any)=> {
-        this.detailCharacter={...res}
+        this.detailCharacter=res
         console.log(this.detailCharacter);
         
       })
