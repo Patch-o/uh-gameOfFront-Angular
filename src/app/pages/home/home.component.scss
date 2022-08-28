@@ -1,11 +1,31 @@
-
-h1{
-    font-family: got;
-    font-size: 12rem;
-    color: transparent;
-    background-image: linear-gradient(180deg,white 0%,black 70%);
-    background-clip: text;
-    text-align: center;
-    font-weight: 90;
+* {
+  height: 100vh;
+  background: url("../../../assets/game-of-thrones-poster_85627-1920x1200.jpg")
+    no-repeat center fixed;
+  background-size: cover;
 }
 
+h1 {
+  font-family: got;
+  font-size: 8rem;
+  color: transparent;
+//   background-image: linear-gradient(214deg, rgb(92, 6, 6) 65%, rgb(2, 2, 2) 75%);
+  background-image: url('../../../assets/fire-place.gif');
+  background-repeat: repeat;
+  background-position-y: 190px;
+  background-clip: text;
+  background-size: 35%;
+  font-weight: 90;
+  position: fixed;
+  top: 44vh;
+  left:3vw;
+    width: 50rem;
+}
+@media only screen and(max-width:743px){
+  h1{
+    background-size: 35%;
+    font-size: 2.8rem;
+    top: 66vh;
+    width: 25rem;
+  } 
+}

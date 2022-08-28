@@ -2,8 +2,10 @@
     position: absolute;
     right:200px;
     top: 3%;
+   
 
-    img:hover{
+    img:hover,le{
+        transition: transform 1s;
         transform: scale(1.3);
     }
 }

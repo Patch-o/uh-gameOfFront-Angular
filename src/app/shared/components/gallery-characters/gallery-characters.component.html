@@ -1,10 +1,13 @@
 <ngx-simplebar [options]="options">
     <div class="gallery-character">
         <div class="gallery-character-item" *ngFor=" let item of character">
-            <h2>{{item['name']}}</h2>
-            <a [routerLink]="['/characters', item['name']]">
-                <img *ngIf="!item['image'] " src="{{truffle.src}}">
-                <img *ngIf="item['image']" src="{{item['image']}}" alt="{{item['name']}}">
+           <!-- <h3 class="outName">{{item['name']}}</h3> -->
+           <img class="image" *ngIf="!item['image'] " src="{{truffle.src}}">
+           <img class="image" *ngIf="item['image']" src="{{item['image']}}" alt="{{item['name']}}">
+           <a [routerLink]="['/characters', item['name']]">
+                <div class="overlay">
+                    <div class="text"><h2>{{item['name']}}</h2></div>
+                </div>
             </a>
         </div>
     </div>   
