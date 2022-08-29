@@ -6,17 +6,26 @@
 </div>
 
 <div class="detail-info">
-    <div class="detail-info-item">
-        <p>PONER escudo casa</p>
+    <div class="detail-info-item" >
+        <h1>HOUSE</h1>
+        <div *ngFor="let item of detailHouse">
+            
+            <img class="shield" *ngIf="detailCharacter.house === item.name" src="{{item['logoURL']}}" >
+            <!-- <img *ngIf="!item['logoURL']" class="shield" src="../../../../../assets/580b585b2edbce24c47b290c.png" > -->
+        </div>       
+               
     </div>
     
     <div class="detail-info-item">
-        <h1>ALIANZAS</h1>
-        <p>{{ detailCharacter.allegiances }}</p>
+        <h1>ALLEGIANCES</h1>
+        <DIV class="detail-info-item-list" *ngFor="let item of detailCharacter.allegiances">
+            <p>{{item}}</p>
+        </DIV>
+            <!-- <p>{{ detailCharacter.allegiances}}</p> -->
     </div>
     
     <div class="detail-info-item">
-        <H1>APARARICIONES</H1>
+        <H1>APPEARANCES</H1>
         <div class="detail-info-item__appear">
             <ngx-simplebar style="height: 15rem" [options]="options">
         <div *ngFor="let item of detailCharacter.appearances">
@@ -27,21 +36,27 @@
 </div>
 
 <div class="detail-info-item">
-    <h1>PADRE</h1>
-    <p>{{ detailCharacter.father }}</p>
-    <p *ngIf="!detailCharacter.father">Hijo bastardo</p>
+    <h1>FATHER</h1> 
+    <div class="detail-info-item-list">
+
+        <p>{{ detailCharacter.father }}</p>
+        <p *ngIf="!detailCharacter.father">Hijo bastardo</p>
+    </div>
 </div>
 
 <div class="detail-info-item">
-    <h1>DESCENDIENTES</h1>
-    <p>{{ detailCharacter.siblings }}</p>
+    <h1>DESCENDENTS</h1>
+    <div class="detail-info-item-list">
+
+        <p>{{ detailCharacter.siblings }}</p>
+    </div>
 </div>
 
 <div class="detail-info-item">
-    <h1>TITULOS</h1>
+    <h1>TITLES</h1>
     <div class="detail-info-item__appear">
         <ngx-simplebar style="height: 15rem" [options]="options">
-            <div *ngFor="let item of detailCharacter.titles">
+            <div  *ngFor="let item of detailCharacter.titles">
                 <p>{{ item }}</p>
             </div>
         </ngx-simplebar>

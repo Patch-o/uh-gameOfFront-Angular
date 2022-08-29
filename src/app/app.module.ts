@@ -17,6 +17,8 @@ import {SimplebarAngularModule} from 'simplebar-angular';
 import { TraductorComponent } from './shared/components/traductor/traductor.component';
 import { FootNavComponent } from './shared/components/foot-nav/foot-nav.component';
 import { ReturnHomeComponent } from './shared/components/return-home/return-home.component';
+// import { NgxSpinnerModule } from 'ngx-spinner';
+
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import { ReturnHomeComponent } from './shared/components/return-home/return-home
     HttpClientModule,
     AppRoutingModule,
     SimplebarAngularModule,
+    // NgxSpinnerModule,
     // TranslateModule.forRoot()
   ],
   providers: [],

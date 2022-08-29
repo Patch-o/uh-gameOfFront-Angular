@@ -1,8 +1,60 @@
-<a routerLink="/houses" class="return-house"><img height="70px" src="../../../../../assets/arrow-left-free-icon-font.png"></a>
+<a routerLink="/houses" class="return-house"
+  ><img height="70px" src="../../../../../assets/arrow-left-free-icon-font.png"
+/></a>
 <app-return-home></app-return-home>
 
-
 <div class="detail">
-<h1>{{detailHouse.name}}</h1>
-<img src="{{detailHouse.logoURL}}">
+  <h1>{{ detailHouse.name }}</h1>
+  <img src="{{ detailHouse.logoURL }}" />
+  <img width="550px" *ngIf="!detailHouse.logoURL" src="../../../../../assets/580b585b2edbce24c47b290c.png">
+</div>
+
+<div class="detail-info">
+  <div class="detail-info-item">
+    <h1>WORDS</h1>
+    <p>{{ detailHouse.words }}</p>
+    <p style="color: rgb(120, 19, 19);" *ngIf="detailHouse.words == ''">illiterates</p>
+  </div>
+
+  <div class="detail-info-item">
+    <h1>SEAT</h1>
+    <div *ngFor="let item of detailHouse.seat">
+
+        <p>{{ item }}</p>
+    </div>
+    <p style="color: rgb(120, 19, 19);" *ngIf="detailHouse.seat == 0">nomads</p>
+  </div>
+
+  <div class="detail-info-item">
+    <h1>REGION</h1>
+    <div *ngFor="let item of detailHouse.region">
+
+        <p>{{ item }}</p>
+    </div>
+    <p style="color: rgb(120, 19, 19);" *ngIf="detailHouse.region == 0">nomads</p>
+  </div>
+
+  <div class="detail-info-item" >
+    <h1>ALLEGIANCE</h1>
+    <div *ngFor="let item of detailHouse.allegiance">
+        <p>{{ item }}</p>
+    </div>
+    <p style="color: rgb(120, 19, 19);" *ngIf="detailHouse.allegiance == 0">nobody likes them</p>
+  </div>
+
+  <div class="detail-info-item">
+    <h1>RELIGION</h1>
+    <div *ngFor="let item of detailHouse.religion">
+        <p>{{ item }}</p>
+    </div>
+    <p style="color: rgb(120, 19, 19);" *ngIf="detailHouse.religion == 0">Heretics</p>
+  </div>
+
+  <div class="detail-info-item">
+    <h1 >FOUNDATION</h1>
+    <div >
+
+        <p >{{ detailHouse.createdAt }}</p>
+    </div>
+  </div>
 </div>

@@ -4,8 +4,8 @@
         
         <h2>{{item['name']}}</h2>
         <a [routerLink]="['/houses' , item['name']]">
-        <img *ngIf="!item['logoURL']" src="{{chichoDefault.src}}" >
-            <img *ngIf="item['logoURL']" src="{{item['logoURL']}}">
+        <img class="noimg" *ngIf="!item['logoURL']" src="../../../../assets/580b585b2edbce24c47b290c.png" >
+            <img class="img" *ngIf="item['logoURL']" src="{{item['logoURL']}}">
         </a> 
       
     </div>

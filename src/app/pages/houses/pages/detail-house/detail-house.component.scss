@@ -19,8 +19,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 70vh;
 }
-.navBar{
-    display: none;
+.detail-info {
+    display: flex;
+    justify-content: space-evenly;
+}
+.detail-info-item {
+    width: 15rem;
 }

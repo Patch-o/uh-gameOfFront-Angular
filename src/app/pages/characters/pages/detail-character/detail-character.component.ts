@@ -1,3 +1,4 @@
+import { ServiceHousesService } from './../../../../shared/services/service-houses.service';
 import { ServiceCharactersService } from './../../../../shared/services/service-characters.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -10,10 +11,11 @@ import { Component, OnInit } from '@angular/core';
 export class DetailCharacterComponent implements OnInit {
 
   detailCharacter:any={};
-
+  detailHouse: any = {};
   constructor(
     private urlId: ActivatedRoute,
-    private pajaritoCharacter: ServiceCharactersService
+    private pajaritoCharacter: ServiceCharactersService,
+    private pajaritoHouse: ServiceHousesService
   ) { }
   options = { autoHide: false, scrollbarMinSize: 100 }
   ngOnInit(): void {
@@ -25,7 +27,11 @@ export class DetailCharacterComponent implements OnInit {
         console.log(this.detailCharacter);
         
       })
-      
+      this.pajaritoHouse.getHouses().subscribe((res:any) => {
+        this.detailHouse= res
+        console.log(this.detailHouse);
+        
+      })
     })
   }
 

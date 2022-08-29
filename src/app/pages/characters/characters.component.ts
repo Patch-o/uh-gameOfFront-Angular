@@ -7,15 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./characters.component.scss']
 })
 export class CharactersComponent implements OnInit {  
-characters = [];
+  public characters = [];
+  public isLoading: boolean = false;
+
   constructor(private pajaritoCharacters: ServiceCharactersService) { }
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.pajaritoCharacters.getCharacters().subscribe((res:any) => {
       this.characters = res;
-      
+      this.isLoading = false;
       console.log(res);
-    })
+    },err => {this.isLoading = false;})
   }
 
 }

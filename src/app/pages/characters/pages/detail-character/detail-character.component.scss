@@ -39,9 +39,10 @@
         padding-top: 1em;
     }
 }
-.detail-info-item__titles{
-    height: 1.5rem;
+.detail-info-item-list{
+    margin-top: 1rem;
 }
+
 ngx-simplebar{
     display: flex;
     width: 100%;
@@ -49,4 +50,7 @@ ngx-simplebar{
     height: 70vh;
     background-color: rgb(0, 0, 0);
 
+}
+.shield {
+    width: 8rem;
 }
