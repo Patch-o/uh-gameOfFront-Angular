@@ -10,6 +10,14 @@ a {
     color: white;
    
 }
+.loader{
+    position: absolute;
+    bottom:50%;
+    left: 45%;
+    width: auto;
+    height: 20vh;
+    
+}
 .navBar{
     display: flex;
     justify-content: space-evenly;
@@ -25,6 +33,53 @@ a {
 }
 .nav-bar:hover {
     text-shadow: rgb(90, 10, 10) 3px 3px 0px;
+}
+.form{
+    width: 70%;
+    position: relative;
+    height: 6rem;
+    margin-top: 3rem;
+    margin-left: 8%;
+    margin-bottom: none;
+
+}
+.search{
+    border: none;
+    outline: none;
+    width: 30%;
+    padding: .6em .6em;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    
+    background-image: url('../../../assets/fractal\ cloud.gif');
+    background-size: 50vw;
+    background-position-y: -38rem;
+    background-position-x: -9rem;
+    background-clip: border-box;
+}
+.search-label{
+    position: absolute;
+    cursor: pointer;
+    top: -2px;
+    left: 15px;
+    color: rgb(0, 0, 0);
+    font-family: gota;
+    transform: translateY(10px) ;
+    transition: transform .5s, color .3s ;
+    font-size: 1.7rem;
+    font-weight: 1000;
+}
+.search:focus{
+    transition:  .5s;
+    width: 60%;
+    box-shadow: white 0px 0px 18px;
+
+}
+.search:focus + .search-label{
+    transform: translateY(-20px) scale(.7);
+    transform-origin: top left;
+    color: rgb(255, 255, 255);
+
 }
 h1{
     font-family: got;

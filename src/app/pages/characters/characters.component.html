@@ -1,5 +1,13 @@
+<div class="form">
+
+    <input id="in" class="search" (keyup)="search($event)" type="text" name="filter" value="" >
+    <label for="in" class="search-label">Busca tu personaje:</label>
+</div>
 <app-return-home></app-return-home>
+
 <img class="loader" *ngIf="isLoading" src="https://i.gifer.com/9ICu.gif">
-<app-gallery-characters [character]="characters"></app-gallery-characters>
+<app-gallery-characters [character]="filteredCharacters"></app-gallery-characters>
 
 <app-foot-nav></app-foot-nav>
+
+

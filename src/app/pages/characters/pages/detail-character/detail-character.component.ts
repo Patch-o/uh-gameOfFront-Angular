@@ -3,6 +3,7 @@ import { ServiceCharactersService } from './../../../../shared/services/service-
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-detail-character',
   templateUrl: './detail-character.component.html',
@@ -12,6 +13,7 @@ export class DetailCharacterComponent implements OnInit {
 
   detailCharacter:any={};
   detailHouse: any = {};
+  
   constructor(
     private urlId: ActivatedRoute,
     private pajaritoCharacter: ServiceCharactersService,
@@ -30,7 +32,7 @@ export class DetailCharacterComponent implements OnInit {
       this.pajaritoHouse.getHouses().subscribe((res:any) => {
         this.detailHouse= res
         console.log(this.detailHouse);
-        
+        // ya se que es la otra funcion....getoNECharacters...
       })
     })
   }

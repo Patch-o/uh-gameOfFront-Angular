@@ -1,1 +1,20 @@
-<p>gallery-chronology works!</p>
+<ngx-simplebar [options]="options">
+  <div class="gallery-chronology" *ngFor="let item of chrono,index as i">
+ 
+    <div *ngIf=" i%2 == 0"  class="par">
+        <div class="image">
+          <p class="text">{{ item.name }}| edad: {{ item.age.age }}</p>
+        <img class="imgPar" *ngIf="item.image" src="{{ item.image }}" />
+        <img class="imgPar" *ngIf="!item.image" src="../../../../assets/rick-roll-rick-ashley.gif">
+      </div>
+    </div>
+    <div *ngIf=" i%2 !== 0"  class="impar">
+        <div class="image">
+        <img class="imgPar" *ngIf="!item.image" src="../../../../assets/rick-roll-rick-ashley.gif">
+        <img class="imgPar" *ngIf="item.image" src="{{ item.image }}" />
+            <p class="text">{{ item.name }}| edad: {{ item.age.age }}</p>
+        </div>
+      </div>
+ 
+</div>
+</ngx-simplebar>

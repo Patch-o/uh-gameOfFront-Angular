@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-gallery-chronology',
@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryChronologyComponent implements OnInit {
 
-  constructor() { }
+  @Input() public chrono : any = [];
 
+  constructor() { }
+  options = { autoHide: false, scrollbarMinSize: 100 }
   ngOnInit(): void {
   }
 

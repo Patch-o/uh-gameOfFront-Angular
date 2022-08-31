@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FootNavComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private translate: TranslateService) { }
+  public selectLanguage(event: any) {
+    this.translate.use(event)
+    console.log(event);
+    
+  }
   ngOnInit(): void {
   }
 

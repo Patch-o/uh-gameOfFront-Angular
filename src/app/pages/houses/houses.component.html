@@ -1,6 +1,13 @@
+
+<div class="form">
+
+    <input id="in"  class="search" (keyup)="search($event)" type="text" name="filter" value="" placeholder=" ">
+    <label for="in" class="search-label">Busca tu casa:</label>
+</div>
 <app-return-home></app-return-home>
+<img class="loader" *ngIf="isLoading" src="../../../assets/rick-roll-rick-ashley.gif">
 
 
-<app-gallery-houses [house]="houses"></app-gallery-houses>
+<app-gallery-houses [house]="filteredHouses"></app-gallery-houses>
 
 <app-foot-nav></app-foot-nav>

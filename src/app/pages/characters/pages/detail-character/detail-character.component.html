@@ -7,25 +7,26 @@
 
 <div class="detail-info">
     <div class="detail-info-item" >
-        <h1>HOUSE</h1>
-        <div *ngFor="let item of detailHouse">
+        <h1>{{"house"| translate}}</h1>
+        <div class="div-shield" *ngFor="let item of detailHouse,index as i">
             
-            <img class="shield" *ngIf="detailCharacter.house === item.name" src="{{item['logoURL']}}" >
+            <img class="shield" *ngIf="detailCharacter.house === item.name" src="{{item['logoURL'] ?? '../../../../../assets/580b585b2edbce24c47b290c.png' }}" >
+            <!-- <img class="shield" *ngIf="detailCharacter.house[1] === item.name" src="{{item['logoURL']}}" > -->
             <!-- <img *ngIf="!item['logoURL']" class="shield" src="../../../../../assets/580b585b2edbce24c47b290c.png" > -->
         </div>       
                
     </div>
     
     <div class="detail-info-item">
-        <h1>ALLEGIANCES</h1>
-        <DIV class="detail-info-item-list" *ngFor="let item of detailCharacter.allegiances">
+        <h1>{{"alle"| translate}}</h1>
+        <div class="detail-info-item-list" *ngFor="let item of detailCharacter.allegiances">
             <p>{{item}}</p>
-        </DIV>
+        </div>
             <!-- <p>{{ detailCharacter.allegiances}}</p> -->
     </div>
     
     <div class="detail-info-item">
-        <H1>APPEARANCES</H1>
+        <H1>{{"appear"| translate}}</H1>
         <div class="detail-info-item__appear">
             <ngx-simplebar style="height: 15rem" [options]="options">
         <div *ngFor="let item of detailCharacter.appearances">
@@ -36,7 +37,7 @@
 </div>
 
 <div class="detail-info-item">
-    <h1>FATHER</h1> 
+    <h1>{{"fath"| translate}}</h1> 
     <div class="detail-info-item-list">
 
         <p>{{ detailCharacter.father }}</p>
@@ -45,7 +46,7 @@
 </div>
 
 <div class="detail-info-item">
-    <h1>DESCENDENTS</h1>
+    <h1>{{"sibl"| translate}}</h1>
     <div class="detail-info-item-list" *ngFor="let item of detailCharacter.siblings">
 
         <p>{{ item }}</p>
@@ -53,7 +54,7 @@
 </div>
 
 <div class="detail-info-item">
-    <h1>TITLES</h1>
+    <h1>{{"tit"| translate}}</h1>
     <div class="detail-info-item__appear">
         <ngx-simplebar style="height: 15rem" [options]="options">
             <div *ngFor="let item of detailCharacter.titles">

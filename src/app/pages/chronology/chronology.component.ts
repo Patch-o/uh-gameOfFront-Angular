@@ -4,36 +4,28 @@ import { ServiceChronologyService } from 'src/app/shared/services/service-chrono
 @Component({
   selector: 'app-chronology',
   templateUrl: './chronology.component.html',
-  styleUrls: ['./chronology.component.scss']
+  styleUrls: ['./chronology.component.scss'],
 })
 export class ChronologyComponent implements OnInit {
-
-  chronology: any={};
+  chronology: any = [];
   ageList: number[] = [];
-
-  constructor(
-    private pajarito: ServiceChronologyService
-  ) { }
+  public isLoading: boolean = false;
+  constructor(private pajarito: ServiceChronologyService) {}
 
   ngOnInit(): void {
-    this.pajarito.getChrono().subscribe((res:any) => {
-      this.chronology = res;
-            console.log(this.chronology);
-
-        let list =[];
-      for (let i = 0; i < this.chronology.length; i++) {
-        let chrono = this.chronology[i];
-         this.ageList= chrono.age.age       
-         
-         console.log(this.ageList);
+    this.isLoading = true;
+    this.pajarito.getChrono().subscribe((res: any) => {
+      this.chronology = res.sort((a: any, b: any) => {
+        if (a.age?.age == null) {
+        return +1
         }
-        // this.ageList= list;
-        // console.log(this.ageList);
-      
-      
-      
-      
-    })
+        if (b.age?.age == null) {
+          return -1
+          }
+        return (a.age?.age ?? 1) - (b.age?.age ?? 1);
+      });
+      this.isLoading= false;
+      console.log(this.chronology);
+    },err => { this.isLoading=false});
   }
-
 }
