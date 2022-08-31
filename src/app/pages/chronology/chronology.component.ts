@@ -16,16 +16,16 @@ export class ChronologyComponent implements OnInit {
     this.isLoading = true;
     this.pajarito.getChrono().subscribe((res: any) => {
       this.chronology = res.sort((a: any, b: any) => {
-        if (a.age?.age == null) {
+        if (a?.age?.age == null) {
         return +1
         }
-        if (b.age?.age == null) {
+        if (b?.age?.age == null) {
           return -1
           }
-        return (a.age?.age ?? 1) - (b.age?.age ?? 1);
+        return (a?.age?.age ?? 1) - (b?.age?.age ?? 1);
       });
       this.isLoading= false;
-      console.log(this.chronology);
+      // console.log(this.chronology);
     },err => { this.isLoading=false});
   }
 }

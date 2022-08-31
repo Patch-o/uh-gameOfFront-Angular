@@ -56,6 +56,16 @@ ngx-simplebar{
     background-color: rgb(0, 0, 0);
 
 }
+.img{
+    border: solid white 1px;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 30rem;
+    img{
+        object-fit: cover;
+        height: 30rem;
+    }
+}
 .shield {
     width: 8rem;
 }

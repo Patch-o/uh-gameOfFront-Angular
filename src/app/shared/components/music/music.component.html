@@ -1,0 +1,5 @@
+<div class="audio" *ngFor="let it of file" (click)="audioP(it.url)">
+    <button  (click)="play()">⏯️</button>
+    
+    <button  (click)="stop($event)">⏹️</button>
+</div>

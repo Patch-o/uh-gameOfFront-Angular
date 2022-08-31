@@ -13,5 +13,7 @@ export class GalleryChronologyComponent implements OnInit {
   options = { autoHide: false, scrollbarMinSize: 100 }
   ngOnInit(): void {
   }
-
+  reverse(){
+    this.chrono.reverse()
+  }
 }

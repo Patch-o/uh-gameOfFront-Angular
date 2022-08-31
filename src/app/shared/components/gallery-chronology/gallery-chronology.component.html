@@ -1,9 +1,16 @@
 <ngx-simplebar [options]="options">
+
+  <div class="container">
+
+    <div class="circle" (click)="reverse()">
+      REVERSE
+    </div>
+  </div>
   <div class="gallery-chronology" *ngFor="let item of chrono,index as i">
  
     <div *ngIf=" i%2 == 0"  class="par">
         <div class="image">
-          <p class="text">{{ item.name }}| edad: {{ item.age.age }}</p>
+          <p class="text">{{ item.name }}| edad: {{ item?.age?.age }}</p>
         <img class="imgPar" *ngIf="item.image" src="{{ item.image }}" />
         <img class="imgPar" *ngIf="!item.image" src="../../../../assets/rick-roll-rick-ashley.gif">
       </div>
@@ -12,7 +19,7 @@
         <div class="image">
         <img class="imgPar" *ngIf="!item.image" src="../../../../assets/rick-roll-rick-ashley.gif">
         <img class="imgPar" *ngIf="item.image" src="{{ item.image }}" />
-            <p class="text">{{ item.name }}| edad: {{ item.age.age }}</p>
+            <p class="text">{{ item.name }}| edad: {{ item?.age?.age }}</p>
         </div>
       </div>
  

@@ -2,9 +2,27 @@
   display: flex;
   justify-content: center;
 }
+.container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  border: solid white 3px;
+  border-radius: 50%;
+  color: white;
+  font-family: gota;
+
+}
 .text {
   display: relative;
-  color: rgb(214, 16, 16);
+  color: rgb(255, 255, 255);
   font-size: 0.001rem;
 //   text-overflow: clip;
   margin-top: 20%;
@@ -15,22 +33,25 @@
   border-radius: 25px;
   border: solid rgb(17, 60, 29) 3px;
   border-left: none;
+  border-top: none;
 }
 .par:hover {
     transform: translateX(1rem);
     .text {
-       
+       display: flex;
         transform: translate3d(2);
         overflow: hidden;
-        font-size: 1rem;
-        // bottom: 20rem;
-    }
+        font-size: 1.5rem;
+        top: 1.3rem;
+        margin-right: 1.4rem;
+      }
 }
 .impar {
   transition: 1s ease-in;
   border-radius: 25px;
   border: solid rgb(37, 22, 22) 3px;
   border-right: none;
+  border-top: none;
 }
 .impar:hover {
   transform: translateX(-2rem);
@@ -42,7 +63,7 @@
     display: flex;
     transform: translate3d(2);
     overflow: hidden;
-    font-size: 1rem;
+    font-size: 1.5rem;
     bottom: 2rem;
   }
 }

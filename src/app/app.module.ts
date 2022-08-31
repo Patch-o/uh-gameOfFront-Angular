@@ -18,6 +18,7 @@ import { TraductorComponent } from './shared/components/traductor/traductor.comp
 import { FootNavComponent } from './shared/components/foot-nav/foot-nav.component';
 import { ReturnHomeComponent } from './shared/components/return-home/return-home.component';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MusicComponent } from './shared/components/music/music.component';
 // import { NgxSpinnerModule } from 'ngx-spinner';
 
 
@@ -40,6 +41,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     TraductorComponent,
     FootNavComponent,
     ReturnHomeComponent,
+    MusicComponent,
 
   ],
   imports: [

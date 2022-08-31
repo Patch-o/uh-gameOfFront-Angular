@@ -11,47 +11,47 @@
 
 <div class="detail-info">
   <div class="detail-info-item">
-    <h1>WORDS</h1>
+    <h1>{{"wor" | translate}}</h1>
     <p>{{ detailHouse.words }}</p>
-    <p style="color: rgb(120, 19, 19);" *ngIf="detailHouse.words == ''">illiterates</p>
+    <p style="color: rgb(120, 19, 19);" *ngIf="detailHouse.words == ''">{{"illi" | translate}}</p>
   </div>
 
   <div class="detail-info-item">
-    <h1>SEAT</h1>
+    <h1>{{"seat" | translate}}</h1>
     <div *ngFor="let item of detailHouse.seat">
 
         <p>{{ item }}</p>
     </div>
-    <p style="color: rgb(120, 19, 19);" *ngIf="detailHouse.seat == 0">nomads</p>
+    <p style="color: rgb(120, 19, 19);" *ngIf="detailHouse.seat == 0">{{"nom" | translate}}</p>
   </div>
 
   <div class="detail-info-item">
-    <h1>REGION</h1>
+    <h1>{{"reg" | translate}}</h1>
     <div *ngFor="let item of detailHouse.region">
 
         <p>{{ item }}</p>
     </div>
-    <p style="color: rgb(120, 19, 19);" *ngIf="detailHouse.region == 0">nomads</p>
+    <p style="color: rgb(120, 19, 19);" *ngIf="detailHouse.region == 0">{{"nom" | translate}}</p>
   </div>
 
   <div class="detail-info-item" >
-    <h1>ALLEGIANCE</h1>
+    <h1>{{"alle" | translate}}</h1>
     <div *ngFor="let item of detailHouse.allegiance">
         <p>{{ item }}</p>
     </div>
-    <p style="color: rgb(120, 19, 19);" *ngIf="detailHouse.allegiance == 0">nobody likes them</p>
+    <p style="color: rgb(120, 19, 19);" *ngIf="detailHouse.allegiance == 0">{{"diss" | translate}}</p>
   </div>
 
   <div class="detail-info-item">
-    <h1>RELIGION</h1>
+    <h1>{{"rel" | translate}}</h1>
     <div *ngFor="let item of detailHouse.religion">
         <p>{{ item }}</p>
     </div>
-    <p style="color: rgb(120, 19, 19);" *ngIf="detailHouse.religion == 0">Heretics</p>
+    <p style="color: rgb(120, 19, 19);" *ngIf="detailHouse.religion == 0">{{"her" | translate}}</p>
   </div>
 
   <div class="detail-info-item">
-    <h1 >FOUNDATION</h1>
+    <h1 >{{"circa" | translate}}</h1>
     <div >
 
         <p >{{ detailHouse.createdAt | date:"dd/MM/yyyy" }}</p>

@@ -6,6 +6,14 @@
     "appear" : "apariciones",
     "fath": "padre",
     "sibl": "hermanos",
-    "tit": "titulos"
-
+    "tit": "titulos",
+    "wor": "frase",
+    "seat": "sede",
+    "reg": "región",
+    "rel":"religion",
+    "circa":"fundación",
+    "illi": "analfabetos",
+    "her" : "herejes",
+    "nom":"nómadas",
+    "diss": "no gustan ni en su casa"
 }
